@@ -1,0 +1,37 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           Page
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              Page
+    plural:                Pages
+    route_prefix:          page
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions:
+        _edit: {label: изменить}
+        _delete: {label: удалить}
+        _save: {label: сохранить страницу}
+        _list: {label: показать все страницы}
+        _new: {label: создать}
+        _save_and_add: {label: сохранить и добавить еще одну страницу}
+      fields:
+        name: {label: Системное имя, help: уникальный идентификатор}
+        header: {label: Заголовок, help: заголовок страницы}
+        content: {label: Контент, help: содержание страницы}
+      list:
+        title: 'Простые страницы'
+        display: [=name, header]
+        max_per_page: 20
+        batch_actions: {} 
+      filter:
+        display: [name, header]
+      form:    ~
+      edit:
+        title: Редактированние страницы %%header%%
+      new:
+        title: Добавление новой страницы

@@ -1,0 +1,43 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           Category
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              Category
+    plural:                Categorys
+    route_prefix:          category
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions:
+        _new: {label: создать} 
+        _edit: {label: изменить} 
+        _delete: {label: удалить} 
+        _save: {label: сохранить} 
+        _save_and_add: {label: сохранить и добавить} 
+        _list: {label: показать все} 
+      fields:
+        name: {label: Системное имя, help: уникальный идентификатор}
+        header: {label: Заголовок, help: заголовок категории}
+        parent_id: {label: Родительская категория, help: если 0 то данная категория является родительской}
+        description: {label: Описание категории, help: краткое описание категории}
+      list:
+        title: 'Категории'
+        layout:  stacked
+        display: [header]
+        params:  |
+          %%=header%% бла бла бла 
+          wefewfw
+        max_per_page: 20
+        batch_actions: {} 
+      filter:
+        display: [name, header]
+      form:
+        display: [name, header, description]
+      edit:
+        title: Редактированние категории %%header%%
+      new:
+        title: Добавление новой категории

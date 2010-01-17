@@ -1,0 +1,12 @@
+a {
+	color: #000;
+	text-decoration: none;
+}
+a:hover {
+	color: #bbb;
+}
+
+.menu {
+	background: #ffffff;
+	padding: 7px;
+}

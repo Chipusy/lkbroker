@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database name="propel" defaultIdMethod="native" noXsd="true" package="lib.model">
+	
+	<table name="page" phpName="Page">
+		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+		<column name="name" type="varchar"/>
+		<column name="header" type="varchar"/>
+		<column name="content" type="longvarchar" />
+	</table>
+	
+	<table name="category" phpName="Category">
+		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+		<column name="parent_id" type="integer"/>
+		<column name="name" type="varchar"/>
+		<column name="header" type="varchar"/>
+		<column name="description" type="longvarchar" />
+	</table>
+	
+	<table name="category_preference" phpName="CategoryPreference">
+		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+		<column name="category_id" type="integer"/>
+		<column name="filter_status" type="integer"/>
+		<column name="key" type="varchar"/>
+		<foreign-key foreignTable="category"  onDelete="cascade">
+			<reference local="category_id" foreign="id"/>
+		</foreign-key>
+	</table>
+	
+	<table name="preference" phpName="Preference">
+		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+		<column name="element_id" type="integer"/>
+		<column name="category_preference_id" type="integer"/>
+		<column name="value" type="longvarchar"/>
+		<foreign-key foreignTable="category_preference"  onDelete="cascade">
+			<reference local="category_preference_id" foreign="id"/>
+		</foreign-key>
+		<foreign-key foreignTable="element"  onDelete="cascade">
+			<reference local="element_id" foreign="id"/>
+		</foreign-key>
+	</table>
+	
+	<table name="element" phpName="Element">
+		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+		<column name="category_id" type="integer"/>
+		<column name="element_status_id" type="integer"/>
+		<column name="name" type="varchar"/>
+		<foreign-key foreignTable="category"  onDelete="cascade">
+			<reference local="category_id" foreign="id"/>
+		</foreign-key>
+		<foreign-key foreignTable="element_status"  onDelete="cascade">
+			<reference local="element_status_id" foreign="id"/>
+		</foreign-key>
+	</table>
+	
+	<table name="element_status" phpName="ElementStatus">
+		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+		<column name="name" type="varchar"/>
+	</table>
+	
+	<table name="order" phpName="Order">
+		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+		<column name="element_id" type="integer"/>
+		<column name="client_id" type="integer"/>
+		<column name="order_status_id" type="integer"/>
+		<column name="date" type="timestamp"/>
+		<column name="comment" type="longvarchar"/>
+		<foreign-key foreignTable="element"  onDelete="cascade">
+			<reference local="element_id" foreign="id"/>
+		</foreign-key>
+		<foreign-key foreignTable="order_status"  onDelete="cascade">
+			<reference local="order_status_id" foreign="id"/>
+		</foreign-key>
+		<foreign-key foreignTable="client"  onDelete="cascade">
+			<reference local="client_id" foreign="id"/>
+		</foreign-key>
+	</table>
+	
+	<table name="order_status" phpName="OrderStatus">
+		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+		<column name="name" type="varchar"/>
+	</table>
+	
+	<table name="client" phpName="Client">
+		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+		<column name="first_name" type="varchar"/>
+		<column name="last_name" type="varchar"/>
+		<column name="email" type="varchar"/>
+		<column name="phone" type="tinyint"/>
+	</table>
+	
+</database>

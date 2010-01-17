@@ -1,0 +1,20 @@
+# default rules
+homepage:
+  url:   /
+  param: { module: page, action: index }
+
+catalog:
+  url:   /catalog
+  param: { module: catalog, action: index }
+
+page:
+  url:   /:name
+  param: { module: page, action: view }
+
+# generic rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*
