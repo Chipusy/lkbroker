@@ -26,11 +26,7 @@ generator:
         description: {label: Описание категории, help: краткое описание категории}
       list:
         title: 'Категории'
-        layout:  stacked
-        display: [header]
-        params:  |
-          %%=header%% бла бла бла 
-          wefewfw
+        display: [=name, =header]
         max_per_page: 20
         batch_actions: {} 
       filter:

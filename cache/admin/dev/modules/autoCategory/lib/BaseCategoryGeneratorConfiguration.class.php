@@ -47,12 +47,12 @@ abstract class BaseCategoryGeneratorConfiguration extends sfModelGeneratorConfig
 
   public function getListParams()
   {
-    return '%%=header%% бла бла бла wefewfw';
+    return '%%=name%% - %%=header%%';
   }
 
   public function getListLayout()
   {
-    return 'stacked';
+    return 'tabular';
   }
 
   public function getListTitle()
@@ -92,7 +92,7 @@ abstract class BaseCategoryGeneratorConfiguration extends sfModelGeneratorConfig
 
   public function getListDisplay()
   {
-    return array(  0 => 'header',);
+    return array(  0 => '=name',  1 => '=header',);
   }
 
   public function getFieldsDefault()

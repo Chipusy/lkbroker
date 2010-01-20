@@ -5,13 +5,13 @@
     <table cellspacing="0">
       <thead>
         <tr>
-          <?php include_partial('category/list_th_stacked', array('sort' => $sort)) ?>
+          <?php include_partial('category/list_th_tabular', array('sort' => $sort)) ?>
           <th id="sf_admin_list_th_actions"><?php echo __('Actions', array(), 'sf_admin') ?></th>
         </tr>
       </thead>
       <tfoot>
         <tr>
-          <th colspan="2">
+          <th colspan="3">
             <?php if ($pager->haveToPaginate()): ?>
               <?php include_partial('category/pagination', array('pager' => $pager)) ?>
             <?php endif; ?>
@@ -26,7 +26,7 @@
       <tbody>
         <?php foreach ($pager->getResults() as $i => $Category): $odd = fmod(++$i, 2) ? 'odd' : 'even' ?>
           <tr class="sf_admin_row <?php echo $odd ?>">
-            <?php include_partial('category/list_td_stacked', array('Category' => $Category)) ?>
+            <?php include_partial('category/list_td_tabular', array('Category' => $Category)) ?>
             <?php include_partial('category/list_td_actions', array('Category' => $Category, 'helper' => $helper)) ?>
           </tr>
         <?php endforeach; ?>

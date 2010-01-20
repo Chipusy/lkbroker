@@ -18,4 +18,12 @@
  */
 class CategoryPreferencePeer extends BaseCategoryPreferencePeer {
 
+	public static function getPreferenceByCategoryId($id)
+	{
+		$c = new Criteria();
+		$c->add(self::CATEGORY_ID, intval($id));
+		
+		return self::doSelect($c);
+	}
+
 } // CategoryPreferencePeer

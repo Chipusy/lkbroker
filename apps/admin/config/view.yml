@@ -6,7 +6,7 @@ default:
     content-type: text/html
 
   metas:
-    title:        Admin
+    title:        www.lk-broker.ru / панель администратора
     #description:  symfony project
     #keywords:     symfony, project
     language:     ru

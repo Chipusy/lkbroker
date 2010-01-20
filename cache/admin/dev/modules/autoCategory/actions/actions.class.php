@@ -42,6 +42,14 @@ abstract class autoCategoryActions extends sfActions
     }
 
     $this->pager = $this->getPager();
+
+	$c = new Criteria();
+	$c->add(CategoryPeer::PARENT_ID, 0);
+	
+	$this->pager->setCriteria($c);
+	
+	$this->categorys = CategoryPeer::getAllSub();
+
     $this->sort = $this->getSort();
   }
 
@@ -126,31 +134,6 @@ abstract class autoCategoryActions extends sfActions
       $notice = $form->getObject()->isNew() ? 'The item was created successfully.' : 'The item was updated successfully.';
 
       $Category = $form->save();
-
-		foreach ( (array) $request->getParameter('category_preference') as $key => $value) 
-		{
-			if (isset($value['id']))
-			{
-				$category_preference = CategoryPreferencePeer::retrieveByPk(intval($value['id']));
-			}
-			else
-			{
-				$category_preference = new CategoryPreference();
-				$category_preference->setCategoryId($form->getObject()->getId());
-			}
-			
-			
-			if (isset($value['delete']))
-			{
-				$category_preference->delete();
-			}
-			elseif ($value['name'] != '')
-			{
-				$category_preference->setKey($value['name']);
-				$category_preference->setFilterStatus(isset($value['filter_status']) ? $value['filter_status'] : 0);
-				$category_preference->save();
-			}
-		}
 
       $this->dispatcher->notify(new sfEvent($this, 'admin.save_object', array('object' => $Category)));
 

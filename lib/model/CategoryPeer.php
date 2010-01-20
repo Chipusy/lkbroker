@@ -18,7 +18,56 @@
  */
 class CategoryPeer extends BaseCategoryPeer {
 	
-	public static function getWithoutParent()
+	public static function getParentWithSub()
+	{
+		$categorys = array();
+		$sub_categorys = array();
+		
+		$c = new Criteria();
+		
+		foreach (self::doSelect($c) as $key => $value) 
+		{
+			if ($value->getParentId() == 0)
+			{
+				$categorys['parent'][$value->getId()] = $value;
+			}
+		}
+		
+		foreach (self::doSelect($c) as $key => $value) 
+		{
+			if ($value->getParentId() != 0)
+			{
+				$categorys['sub'][$value->getParentId()][$value->getId()] = $value;
+			}
+		}
+		
+		return $categorys;
+	}
+	
+	public static function getAllSub($id = null)
+	{
+		$c = new Criteria();
+		
+		if ($id)
+		{
+			$c->add(self::PARENT_ID, $id);
+		}
+		else
+		{
+			$c->add(self::PARENT_ID, 0, Criteria::NOT_LIKE);
+		}
+		
+		$categorys = array();
+		
+		foreach (self::doSelect($c) as $key => $value) 
+		{
+			$categorys[$value->getParentId()][] = $value;
+		}
+		
+		return $categorys;
+	}
+	
+	public static function getAllParent()
 	{
 		$c = new Criteria();
 		$c->add(self::PARENT_ID, 0);
@@ -27,5 +76,4 @@ class CategoryPeer extends BaseCategoryPeer {
 		
 		return $categorys;
 	}
-	
 } // CategoryPeer

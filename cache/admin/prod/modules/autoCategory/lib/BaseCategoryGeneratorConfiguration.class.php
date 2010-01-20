@@ -12,7 +12,7 @@ abstract class BaseCategoryGeneratorConfiguration extends sfModelGeneratorConfig
 {
   public function getActionsDefault()
   {
-    return array();
+    return array(  '_new' =>   array(    'label' => 'создать',  ),  '_edit' =>   array(    'label' => 'изменить',  ),  '_delete' =>   array(    'label' => 'удалить',  ),  '_save' =>   array(    'label' => 'сохранить',  ),  '_save_and_add' =>   array(    'label' => 'сохранить и добавить',  ),  '_list' =>   array(    'label' => 'показать все',  ),);
   }
 
   public function getFormActions()
@@ -42,12 +42,12 @@ abstract class BaseCategoryGeneratorConfiguration extends sfModelGeneratorConfig
 
   public function getListBatchActions()
   {
-    return array(  '_delete' => NULL,);
+    return array();
   }
 
   public function getListParams()
   {
-    return '%%id%% - %%parent_id%% - %%name%% - %%header%% - %%description%%';
+    return '%%=name%% - %%=header%%';
   }
 
   public function getListLayout()
@@ -57,27 +57,27 @@ abstract class BaseCategoryGeneratorConfiguration extends sfModelGeneratorConfig
 
   public function getListTitle()
   {
-    return 'Category List';
+    return 'Категории';
   }
 
   public function getEditTitle()
   {
-    return 'Edit Category';
+    return 'Редактированние категории %%header%%';
   }
 
   public function getNewTitle()
   {
-    return 'New Category';
+    return 'Добавление новой категории';
   }
 
   public function getFilterDisplay()
   {
-    return array();
+    return array(  0 => 'name',  1 => 'header',);
   }
 
   public function getFormDisplay()
   {
-    return array();
+    return array(  0 => 'name',  1 => 'header',  2 => 'description',);
   }
 
   public function getEditDisplay()
@@ -92,17 +92,17 @@ abstract class BaseCategoryGeneratorConfiguration extends sfModelGeneratorConfig
 
   public function getListDisplay()
   {
-    return array(  0 => 'id',  1 => 'parent_id',  2 => 'name',  3 => 'header',  4 => 'description',);
+    return array(  0 => '=name',  1 => '=header',);
   }
 
   public function getFieldsDefault()
   {
     return array(
       'id' => array(  'is_link' => true,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',),
-      'parent_id' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',),
-      'name' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',),
-      'header' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',),
-      'description' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',),
+      'parent_id' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',  'label' => 'Родительская категория',  'help' => 'если 0 то данная категория является родительской',),
+      'name' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',  'label' => 'Системное имя',  'help' => 'уникальный идентификатор',),
+      'header' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',  'label' => 'Заголовок',  'help' => 'заголовок категории',),
+      'description' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',  'label' => 'Описание категории',  'help' => 'краткое описание категории',),
     );
   }
 
