@@ -18,4 +18,9 @@
  */
 class ElementStatus extends BaseElementStatus {
 
+	public function __toString()
+	{
+		return $this->getName();
+	}
+
 } // ElementStatus

@@ -10,7 +10,8 @@
  */
 class ElementForm extends BaseElementForm
 {
-  public function configure()
-  {
-  }
+	public function configure()
+	{
+		unset($this['category_id'], $this['price_type'], $this['company_id'], $this['date_updated'], $this['date_created'], $this['view_count'], $this['order_count']);
+	}
 }

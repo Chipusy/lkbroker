@@ -45,7 +45,7 @@ class categoryActions extends autoCategoryActions
 			
 			foreach ($category_preference as $key => $value) 
 			{
-				$result[] = array('id' => $value->getId(), 'filter_status' => $value->getFilterStatus(), 'key' => $value->getKey());
+				$result[] = array('id' => $value->getId(), 'filter_status' => $value->getFilterStatus(), 'key' => $value->getKey(), 'preference_type' => $value->getPreferenceType(), 'preference_unit' => $value->getPreferenceUnit());
 			}
 		}
 		
@@ -58,7 +58,7 @@ class categoryActions extends autoCategoryActions
 		$form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
 		if ($form->isValid())
 		{
-			$notice = $form->getObject()->isNew() ? 'The item was created successfully.' : 'The item was updated successfully.';
+			$notice = $form->getObject()->isNew() ? 'Категория создана успешно.' : 'Категория изменена успешно.';
 			
 			$Category = $form->save();
 			
@@ -81,6 +81,8 @@ class categoryActions extends autoCategoryActions
 				elseif ($value['name'] != '')
 				{
 					$category_preference->setKey($value['name']);
+					$category_preference->setPreferenceType($value['preference_type']);
+					$category_preference->setPreferenceUnit($value['preference_unit']);
 					$category_preference->setFilterStatus(isset($value['filter_status']) ? $value['filter_status'] : 0);
 					$category_preference->save();
 				}
@@ -90,7 +92,7 @@ class categoryActions extends autoCategoryActions
 			
 			if ($request->hasParameter('_save_and_add'))
 			{
-				$this->getUser()->setFlash('notice', $notice.' You can add another one below.');
+				$this->getUser()->setFlash('notice', $notice.' Вы можете создать еще одну.');
 				
 				$this->redirect('@category_new');
 			}

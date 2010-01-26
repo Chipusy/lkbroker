@@ -20,6 +20,8 @@
 		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
 		<column name="category_id" type="integer"/>
 		<column name="filter_status" type="integer"/>
+		<column name="preference_type" type="integer"/>
+		<column name="preference_unit" type="varchar"/>
 		<column name="key" type="varchar"/>
 		<foreign-key foreignTable="category"  onDelete="cascade">
 			<reference local="category_id" foreign="id"/>
@@ -43,12 +45,26 @@
 		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
 		<column name="category_id" type="integer"/>
 		<column name="element_status_id" type="integer"/>
+		<column name="company_id" type="integer"/>
 		<column name="name" type="varchar"/>
+		<column name="title" type="varchar"/>
+		<column name="date_created" type="timestamp"/>
+		<column name="date_updated" type="timestamp"/>
+		<column name="preview" type="longvarchar"/>
+		<column name="description" type="longvarchar"/>
+		<column name="view_count" type="integer"/>
+		<column name="order_count" type="integer"/>
+		<column name="owner_price" type="bigint" size="20"/>
+		<column name="company_price" type="bigint" size="20"/>
+		<column name="price_type" type="integer"/>
 		<foreign-key foreignTable="category"  onDelete="cascade">
 			<reference local="category_id" foreign="id"/>
 		</foreign-key>
 		<foreign-key foreignTable="element_status"  onDelete="cascade">
 			<reference local="element_status_id" foreign="id"/>
+		</foreign-key>
+		<foreign-key foreignTable="company"  onDelete="cascade">
+			<reference local="company_id" foreign="id"/>
 		</foreign-key>
 	</table>
 	
@@ -86,6 +102,30 @@
 		<column name="last_name" type="varchar"/>
 		<column name="email" type="varchar"/>
 		<column name="phone" type="tinyint"/>
+	</table>
+	
+	<table name="company" phpName="Company">
+		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+		<column name="name" type="varchar" required="true"/>
+		<column name="patron" type="varchar"/>
+		<column name="phone" type="varchar"/>
+		<column name="fax" type="varchar"/>
+		<column name="site" type="varchar"/>
+		<column name="city" type="varchar"/>
+		<column name="adress" type="longvarchar"/>
+		<column name="procent" type="varchar"/>
+		<column name="comment" type="longvarchar"/>
+		<column name="our_comment" type="longvarchar"/>
+	</table>
+	
+	<table name="element_file" phpName="ElementFile">
+		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+		<column name="name" type="varchar" required="true"/>
+		<column name="file_type" type="integer"/>
+		<column name="element_id" type="integer"/>
+		<foreign-key foreignTable="element"  onDelete="cascade">
+			<reference local="element_id" foreign="id"/>
+		</foreign-key>
 	</table>
 	
 </database>

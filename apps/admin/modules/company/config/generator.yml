@@ -1,0 +1,44 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           Company
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              Company
+    plural:                Companys
+    route_prefix:          company
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions:
+        _new: {label: создать} 
+        _edit: {label: изменить} 
+        _delete: {label: удалить} 
+        _save: {label: сохранить} 
+        _save_and_add: {label: сохранить и добавить} 
+        _list: {label: показать все}
+      fields:
+        name: {label: Название, help: наименование организации}
+        phone: {label: Телефон}
+        fax: {label: Факс}
+        city: {label: Город}
+        comment: {label: Примечание, help: коментарий организации}
+        our_comment: {label: Коментарий, help: скрытый коментарий}
+        procent: {label: Процентная ставка}
+        adress: {label: Адрес}
+        site: {label: Сайт}
+        patron: {label: Ген. дир., help: Ф.И.О.}
+      list:
+        title: Компании
+        display: [=name, =city, phone, fax, site]
+        max_per_page: 20
+        batch_actions: {} 
+      filter:
+        display: [name, city]
+      form: ~
+      edit:
+        title: Редактированние компании
+      new:
+        title: Добавление новой компании

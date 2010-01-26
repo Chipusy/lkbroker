@@ -8,6 +8,13 @@
     <?php include_stylesheets() ?>
     <?php include_javascripts() ?>
 	<script type="text/javascript" src="/js/tiny_mce/tiny_mce.js"></script>
+	<script type="text/javascript" src="/highslide/highslide-full.js"></script>
+	<link rel="stylesheet" type="text/css" href="/highslide/highslide.css" />
+	<script type="text/javascript">
+		hs.graphicsDir = "/highslide/graphics/";
+		hs.outlineType = "rounded-white";
+		hs.wrapperClassName = 'draggable-header';
+	</script>
   </head>
   <body>
 	<script type="text/javascript" charset="utf-8">
@@ -53,7 +60,7 @@
 	</script>
 	
 	<div class="menu">
-		<a href="<?php echo url_for('category/index') ?>">категории</a> | <a href="<?php echo url_for('page/index') ?>">простые страницы </a>
+		<a href="<?php echo url_for('category/index') ?>">категории</a> | <a href="<?php echo url_for('page/index') ?>">простые страницы </a> | <a href="<?php echo url_for('element/index') ?>">элементы </a> | <a href="<?php echo url_for('element_status/index') ?>">статусы  элементов</a> | <a href="<?php echo url_for('company/index') ?>"> компании </a>
 	</div>
 	
 	<br>

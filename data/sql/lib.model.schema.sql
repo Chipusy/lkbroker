@@ -48,6 +48,8 @@ CREATE TABLE `category_preference`
 	`id` INTEGER  NOT NULL AUTO_INCREMENT,
 	`category_id` INTEGER,
 	`filter_status` INTEGER,
+	`preference_type` INTEGER,
+	`preference_unit` VARCHAR(255),
 	`key` VARCHAR(255),
 	PRIMARY KEY (`id`),
 	INDEX `category_preference_FI_1` (`category_id`),
@@ -95,7 +97,18 @@ CREATE TABLE `element`
 	`id` INTEGER  NOT NULL AUTO_INCREMENT,
 	`category_id` INTEGER,
 	`element_status_id` INTEGER,
+	`company_id` INTEGER,
 	`name` VARCHAR(255),
+	`title` VARCHAR(255),
+	`date_created` DATETIME,
+	`date_updated` DATETIME,
+	`preview` TEXT,
+	`description` TEXT,
+	`view_count` INTEGER,
+	`order_count` INTEGER,
+	`owner_price` BIGINT(20),
+	`company_price` BIGINT(20),
+	`price_type` INTEGER,
 	PRIMARY KEY (`id`),
 	INDEX `element_FI_1` (`category_id`),
 	CONSTRAINT `element_FK_1`
@@ -106,6 +119,11 @@ CREATE TABLE `element`
 	CONSTRAINT `element_FK_2`
 		FOREIGN KEY (`element_status_id`)
 		REFERENCES `element_status` (`id`)
+		ON DELETE CASCADE,
+	INDEX `element_FI_3` (`company_id`),
+	CONSTRAINT `element_FK_3`
+		FOREIGN KEY (`company_id`)
+		REFERENCES `company` (`id`)
 		ON DELETE CASCADE
 )Type=InnoDB;
 
@@ -185,6 +203,50 @@ CREATE TABLE `client`
 	`email` VARCHAR(255),
 	`phone` TINYINT,
 	PRIMARY KEY (`id`)
+)Type=InnoDB;
+
+#-----------------------------------------------------------------------------
+#-- company
+#-----------------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `company`;
+
+
+CREATE TABLE `company`
+(
+	`id` INTEGER  NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(255)  NOT NULL,
+	`patron` VARCHAR(255),
+	`phone` VARCHAR(255),
+	`fax` VARCHAR(255),
+	`site` VARCHAR(255),
+	`city` VARCHAR(255),
+	`adress` TEXT,
+	`procent` VARCHAR(255),
+	`comment` TEXT,
+	`our_comment` TEXT,
+	PRIMARY KEY (`id`)
+)Type=InnoDB;
+
+#-----------------------------------------------------------------------------
+#-- element_file
+#-----------------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `element_file`;
+
+
+CREATE TABLE `element_file`
+(
+	`id` INTEGER  NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(255)  NOT NULL,
+	`file_type` INTEGER,
+	`element_id` INTEGER,
+	PRIMARY KEY (`id`),
+	INDEX `element_file_FI_1` (`element_id`),
+	CONSTRAINT `element_file_FK_1`
+		FOREIGN KEY (`element_id`)
+		REFERENCES `element` (`id`)
+		ON DELETE CASCADE
 )Type=InnoDB;
 
 # This restores the fkey checks, after having unset them earlier

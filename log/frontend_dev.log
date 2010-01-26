@@ -2992,3 +2992,227 @@ Jan 15 14:21:04 symfony [info] {sfWebDebugLogger} Action "page/view" 45.86 ms (1
 Jan 15 14:21:04 symfony [info] {sfWebDebugLogger} View "Success" for "page/view" 131.55 ms (1)
 Jan 15 14:21:04 symfony [info] {sfWebDebugLogger} Partial "page/_menu" 106.42 ms (1)
 Jan 15 14:21:04 symfony [info] {sfWebResponse} Send content (78577 o)
+Jan 20 19:31:38 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'page',  'action' => 'index',)
+Jan 20 19:31:38 symfony [info] {myUser} Automatic user logout due to timeout
+Jan 20 19:31:38 symfony [info] {myUser} User is not authenticated
+Jan 20 19:31:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 19:31:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 19:31:38 symfony [info] {pageActions} Call "pageActions->executeIndex()"
+Jan 20 19:31:38 symfony [info] {sfPHPView} Render "/www/lk-broker/apps/frontend/modules/page/templates/indexSuccess.php"
+Jan 20 19:31:39 symfony [info] {sfPHPView} Decorate content with "/www/lk-broker/apps/frontend/templates/layout.php"
+Jan 20 19:31:39 symfony [info] {sfPHPView} Render "/www/lk-broker/apps/frontend/templates/layout.php"
+Jan 20 19:31:39 symfony [info] {sfPartialView} Render "/www/lk-broker/apps/frontend/modules/page/templates/_menu.php"
+Jan 20 19:31:39 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.5 MB | mempeak:    5.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 20 19:31:39 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SELECT page.ID, page.NAME, page.HEADER, page.CONTENT FROM `page`
+Jan 20 19:31:39 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 19:31:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 19:31:39 symfony [info] {sfWebDebugLogger} Configuration 238.54 ms (10)
+Jan 20 19:31:39 symfony [info] {sfWebDebugLogger} Factories 583.08 ms (1)
+Jan 20 19:31:39 symfony [info] {sfWebDebugLogger} Action "page/index" 0.93 ms (1)
+Jan 20 19:31:39 symfony [info] {sfWebDebugLogger} View "Success" for "page/index" 368.90 ms (1)
+Jan 20 19:31:39 symfony [info] {sfWebDebugLogger} Partial "page/_menu" 135.23 ms (1)
+Jan 20 19:31:39 symfony [info] {sfWebResponse} Send content (74169 o)
+Jan 20 19:32:15 symfony [info] {sfPatternRouting} Match route "page" (/:name) for /rules with parameters array (  'module' => 'page',  'action' => 'view',  'name' => 'rules',)
+Jan 20 19:32:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 19:32:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 19:32:15 symfony [info] {pageActions} Call "pageActions->executeView()"
+Jan 20 19:32:15 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.3 MB | mempeak:    4.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 20 19:32:15 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    4.5 MB | mempeak:    4.5 MB | memdelta:      0.0 B | SELECT page.ID, page.NAME, page.HEADER, page.CONTENT FROM `page` WHERE page.NAME='rules' LIMIT 1
+Jan 20 19:32:15 symfony [info] {sfPHPView} Render "/www/lk-broker/apps/frontend/modules/page/templates/viewSuccess.php"
+Jan 20 19:32:15 symfony [info] {sfPHPView} Decorate content with "/www/lk-broker/apps/frontend/templates/layout.php"
+Jan 20 19:32:15 symfony [info] {sfPHPView} Render "/www/lk-broker/apps/frontend/templates/layout.php"
+Jan 20 19:32:15 symfony [info] {sfPartialView} Render "/www/lk-broker/apps/frontend/modules/page/templates/_menu.php"
+Jan 20 19:32:15 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SELECT page.ID, page.NAME, page.HEADER, page.CONTENT FROM `page`
+Jan 20 19:32:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 19:32:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 19:32:15 symfony [info] {sfWebDebugLogger} Configuration 2.62 ms (9)
+Jan 20 19:32:15 symfony [info] {sfWebDebugLogger} Factories 55.95 ms (1)
+Jan 20 19:32:15 symfony [info] {sfWebDebugLogger} Action "page/view" 40.01 ms (1)
+Jan 20 19:32:15 symfony [info] {sfWebDebugLogger} View "Success" for "page/view" 28.53 ms (1)
+Jan 20 19:32:15 symfony [info] {sfWebDebugLogger} Partial "page/_menu" 5.72 ms (1)
+Jan 20 19:32:15 symfony [info] {sfWebResponse} Send content (78658 o)
+Jan 20 19:32:18 symfony [info] {sfPatternRouting} Match route "page" (/:name) for /contacts with parameters array (  'module' => 'page',  'action' => 'view',  'name' => 'contacts',)
+Jan 20 19:32:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 19:32:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 19:32:18 symfony [info] {pageActions} Call "pageActions->executeView()"
+Jan 20 19:32:18 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.3 MB | mempeak:    4.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 20 19:32:19 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    4.5 MB | mempeak:    4.5 MB | memdelta:      0.0 B | SELECT page.ID, page.NAME, page.HEADER, page.CONTENT FROM `page` WHERE page.NAME='contacts' LIMIT 1
+Jan 20 19:32:19 symfony [info] {sfPHPView} Render "/www/lk-broker/apps/frontend/modules/page/templates/viewSuccess.php"
+Jan 20 19:32:19 symfony [info] {sfPHPView} Decorate content with "/www/lk-broker/apps/frontend/templates/layout.php"
+Jan 20 19:32:19 symfony [info] {sfPHPView} Render "/www/lk-broker/apps/frontend/templates/layout.php"
+Jan 20 19:32:19 symfony [info] {sfPartialView} Render "/www/lk-broker/apps/frontend/modules/page/templates/_menu.php"
+Jan 20 19:32:19 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SELECT page.ID, page.NAME, page.HEADER, page.CONTENT FROM `page`
+Jan 20 19:32:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 19:32:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 19:32:19 symfony [info] {sfWebDebugLogger} Configuration 2.50 ms (9)
+Jan 20 19:32:19 symfony [info] {sfWebDebugLogger} Factories 56.90 ms (1)
+Jan 20 19:32:19 symfony [info] {sfWebDebugLogger} Action "page/view" 39.10 ms (1)
+Jan 20 19:32:19 symfony [info] {sfWebDebugLogger} View "Success" for "page/view" 28.00 ms (1)
+Jan 20 19:32:19 symfony [info] {sfWebDebugLogger} Partial "page/_menu" 6.34 ms (1)
+Jan 20 19:32:19 symfony [info] {sfWebResponse} Send content (78634 o)
+Jan 20 19:32:49 symfony [info] {sfPatternRouting} Match route "catalog" (/catalog) for /catalog with parameters array (  'module' => 'catalog',  'action' => 'index',)
+Jan 20 19:32:49 symfony [info] {sfFrontWebController} Action "catalog/index" does not exist
+Jan 20 19:32:49 symfony [err] {sfError404Exception} Action "catalog/index" does not exist.
+Jan 20 19:32:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Jan 20 19:32:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 19:32:49 symfony [info] {sfWebDebugLogger} Configuration 1.31 ms (5)
+Jan 20 19:32:49 symfony [info] {sfWebDebugLogger} Factories 55.35 ms (1)
+Jan 20 19:32:53 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'page',  'action' => 'index',)
+Jan 20 19:32:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 19:32:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 19:32:53 symfony [info] {pageActions} Call "pageActions->executeIndex()"
+Jan 20 19:32:53 symfony [info] {sfPHPView} Render "/www/lk-broker/apps/frontend/modules/page/templates/indexSuccess.php"
+Jan 20 19:32:53 symfony [info] {sfPHPView} Decorate content with "/www/lk-broker/apps/frontend/templates/layout.php"
+Jan 20 19:32:53 symfony [info] {sfPHPView} Render "/www/lk-broker/apps/frontend/templates/layout.php"
+Jan 20 19:32:53 symfony [info] {sfPartialView} Render "/www/lk-broker/apps/frontend/modules/page/templates/_menu.php"
+Jan 20 19:32:53 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.8 MB | mempeak:    4.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 20 19:32:53 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SELECT page.ID, page.NAME, page.HEADER, page.CONTENT FROM `page`
+Jan 20 19:32:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 19:32:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 19:32:53 symfony [info] {sfWebDebugLogger} Configuration 2.42 ms (9)
+Jan 20 19:32:53 symfony [info] {sfWebDebugLogger} Factories 53.72 ms (1)
+Jan 20 19:32:53 symfony [info] {sfWebDebugLogger} Action "page/index" 0.52 ms (1)
+Jan 20 19:32:53 symfony [info] {sfWebDebugLogger} View "Success" for "page/index" 61.28 ms (1)
+Jan 20 19:32:53 symfony [info] {sfWebDebugLogger} Partial "page/_menu" 40.01 ms (1)
+Jan 20 19:32:53 symfony [info] {sfWebResponse} Send content (70838 o)
+Jan 20 19:34:55 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'page',  'action' => 'index',)
+Jan 20 19:34:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 19:34:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 19:34:55 symfony [info] {pageActions} Call "pageActions->executeIndex()"
+Jan 20 19:34:55 symfony [info] {sfPHPView} Render "/www/lk-broker/apps/frontend/modules/page/templates/indexSuccess.php"
+Jan 20 19:34:55 symfony [info] {sfPHPView} Decorate content with "/www/lk-broker/apps/frontend/templates/layout.php"
+Jan 20 19:34:55 symfony [info] {sfPHPView} Render "/www/lk-broker/apps/frontend/templates/layout.php"
+Jan 20 19:34:55 symfony [info] {sfPartialView} Render "/www/lk-broker/apps/frontend/modules/page/templates/_menu.php"
+Jan 20 19:34:55 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.8 MB | mempeak:    4.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 20 19:34:55 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SELECT page.ID, page.NAME, page.HEADER, page.CONTENT FROM `page`
+Jan 20 19:34:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 19:34:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 19:34:55 symfony [info] {sfWebDebugLogger} Configuration 2.95 ms (9)
+Jan 20 19:34:55 symfony [info] {sfWebDebugLogger} Factories 64.07 ms (1)
+Jan 20 19:34:55 symfony [info] {sfWebDebugLogger} Action "page/index" 0.49 ms (1)
+Jan 20 19:34:55 symfony [info] {sfWebDebugLogger} View "Success" for "page/index" 65.30 ms (1)
+Jan 20 19:34:55 symfony [info] {sfWebDebugLogger} Partial "page/_menu" 43.23 ms (1)
+Jan 20 19:34:55 symfony [info] {sfWebResponse} Send content (70941 o)
+Jan 20 19:34:58 symfony [info] {sfPatternRouting} Match route "page" (/:name) for /page123 with parameters array (  'module' => 'page',  'action' => 'view',  'name' => 'page123',)
+Jan 20 19:34:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 19:34:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 19:34:58 symfony [info] {pageActions} Call "pageActions->executeView()"
+Jan 20 19:34:58 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.3 MB | mempeak:    4.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 20 19:34:58 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    4.5 MB | mempeak:    4.5 MB | memdelta:      0.0 B | SELECT page.ID, page.NAME, page.HEADER, page.CONTENT FROM `page` WHERE page.NAME='page123' LIMIT 1
+Jan 20 19:34:58 symfony [info] {sfPHPView} Render "/www/lk-broker/apps/frontend/modules/page/templates/viewSuccess.php"
+Jan 20 19:34:58 symfony [info] {sfPHPView} Decorate content with "/www/lk-broker/apps/frontend/templates/layout.php"
+Jan 20 19:34:58 symfony [info] {sfPHPView} Render "/www/lk-broker/apps/frontend/templates/layout.php"
+Jan 20 19:34:58 symfony [info] {sfPartialView} Render "/www/lk-broker/apps/frontend/modules/page/templates/_menu.php"
+Jan 20 19:34:58 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SELECT page.ID, page.NAME, page.HEADER, page.CONTENT FROM `page`
+Jan 20 19:34:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 19:34:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 19:34:58 symfony [info] {sfWebDebugLogger} Configuration 2.50 ms (9)
+Jan 20 19:34:58 symfony [info] {sfWebDebugLogger} Factories 53.97 ms (1)
+Jan 20 19:34:58 symfony [info] {sfWebDebugLogger} Action "page/view" 39.58 ms (1)
+Jan 20 19:34:58 symfony [info] {sfWebDebugLogger} View "Success" for "page/view" 27.49 ms (1)
+Jan 20 19:34:58 symfony [info] {sfWebDebugLogger} Partial "page/_menu" 5.95 ms (1)
+Jan 20 19:34:58 symfony [info] {sfWebResponse} Send content (78751 o)
+Jan 22 14:50:25 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'page',  'action' => 'index',)
+Jan 22 14:50:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 22 14:50:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 22 14:50:25 symfony [info] {pageActions} Call "pageActions->executeIndex()"
+Jan 22 14:50:25 symfony [info] {sfPHPView} Render "/www/lk-broker/apps/frontend/modules/page/templates/indexSuccess.php"
+Jan 22 14:50:25 symfony [info] {sfPHPView} Decorate content with "/www/lk-broker/apps/frontend/templates/layout.php"
+Jan 22 14:50:26 symfony [info] {sfPHPView} Render "/www/lk-broker/apps/frontend/templates/layout.php"
+Jan 22 14:50:26 symfony [info] {sfPartialView} Render "/www/lk-broker/apps/frontend/modules/page/templates/_menu.php"
+Jan 22 14:50:26 symfony [err] {PropelException} Unable to open PDO connection [wrapped: SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/Applications/xampp/xamppfiles/var/mysql/mysql.sock' (61)]
+Jan 22 14:50:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Jan 22 14:50:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 22 14:50:26 symfony [info] {sfWebDebugLogger} Configuration 7.02 ms (9)
+Jan 22 14:50:26 symfony [info] {sfWebDebugLogger} Factories 534.09 ms (1)
+Jan 22 14:50:26 symfony [info] {sfWebDebugLogger} Action "page/index" 0.54 ms (1)
+Jan 22 14:50:26 symfony [info] {sfWebDebugLogger} View "Success" for "page/index" 452.36 ms (1)
+Jan 22 14:50:26 symfony [info] {sfWebDebugLogger} Partial "page/_menu" 334.56 ms (1)
+Jan 22 14:50:32 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'page',  'action' => 'index',)
+Jan 22 14:50:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 22 14:50:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 22 14:50:32 symfony [info] {pageActions} Call "pageActions->executeIndex()"
+Jan 22 14:50:32 symfony [info] {sfPHPView} Render "/www/lk-broker/apps/frontend/modules/page/templates/indexSuccess.php"
+Jan 22 14:50:32 symfony [info] {sfPHPView} Decorate content with "/www/lk-broker/apps/frontend/templates/layout.php"
+Jan 22 14:50:32 symfony [info] {sfPHPView} Render "/www/lk-broker/apps/frontend/templates/layout.php"
+Jan 22 14:50:32 symfony [info] {sfPartialView} Render "/www/lk-broker/apps/frontend/modules/page/templates/_menu.php"
+Jan 22 14:50:32 symfony [debug] {sfPropelLogger} time:  0.067 sec | slow:  NO | mem:    4.8 MB | mempeak:    4.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 22 14:50:32 symfony [debug] {sfPropelLogger} time:  0.075 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SELECT page.ID, page.NAME, page.HEADER, page.CONTENT FROM `page`
+Jan 22 14:50:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 22 14:50:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 22 14:50:32 symfony [info] {sfWebDebugLogger} Configuration 2.62 ms (9)
+Jan 22 14:50:32 symfony [info] {sfWebDebugLogger} Factories 57.49 ms (1)
+Jan 22 14:50:32 symfony [info] {sfWebDebugLogger} Action "page/index" 0.51 ms (1)
+Jan 22 14:50:32 symfony [info] {sfWebDebugLogger} View "Success" for "page/index" 344.53 ms (1)
+Jan 22 14:50:32 symfony [info] {sfWebDebugLogger} Partial "page/_menu" 321.54 ms (1)
+Jan 22 14:50:32 symfony [info] {sfWebResponse} Send content (70380 o)
+Jan 23 15:24:31 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'page',  'action' => 'index',)
+Jan 23 15:24:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 23 15:24:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 23 15:24:32 symfony [info] {pageActions} Call "pageActions->executeIndex()"
+Jan 23 15:24:32 symfony [info] {sfPHPView} Render "/www/lk-broker/apps/frontend/modules/page/templates/indexSuccess.php"
+Jan 23 15:24:32 symfony [info] {sfPHPView} Decorate content with "/www/lk-broker/apps/frontend/templates/layout.php"
+Jan 23 15:24:32 symfony [info] {sfPHPView} Render "/www/lk-broker/apps/frontend/templates/layout.php"
+Jan 23 15:24:32 symfony [info] {sfPartialView} Render "/www/lk-broker/apps/frontend/modules/page/templates/_menu.php"
+Jan 23 15:24:33 symfony [debug] {sfPropelLogger} time:  0.053 sec | slow:  NO | mem:    4.8 MB | mempeak:    4.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 23 15:24:33 symfony [debug] {sfPropelLogger} time:  0.122 sec | slow: YES | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SELECT page.ID, page.NAME, page.HEADER, page.CONTENT FROM `page`
+Jan 23 15:24:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 23 15:24:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 23 15:24:33 symfony [info] {sfWebDebugLogger} Configuration 9.05 ms (9)
+Jan 23 15:24:33 symfony [info] {sfWebDebugLogger} Factories 1633.77 ms (1)
+Jan 23 15:24:33 symfony [info] {sfWebDebugLogger} Action "page/index" 1.05 ms (1)
+Jan 23 15:24:33 symfony [info] {sfWebDebugLogger} View "Success" for "page/index" 881.71 ms (1)
+Jan 23 15:24:33 symfony [info] {sfWebDebugLogger} Partial "page/_menu" 638.51 ms (1)
+Jan 23 15:24:33 symfony [info] {sfWebResponse} Send content (70102 o)
+Jan 23 15:24:41 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'page',  'action' => 'index',)
+Jan 23 15:24:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 23 15:24:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 23 15:24:41 symfony [info] {pageActions} Call "pageActions->executeIndex()"
+Jan 23 15:24:41 symfony [info] {sfPHPView} Render "/www/lk-broker/apps/frontend/modules/page/templates/indexSuccess.php"
+Jan 23 15:24:41 symfony [info] {sfPHPView} Decorate content with "/www/lk-broker/apps/frontend/templates/layout.php"
+Jan 23 15:24:41 symfony [info] {sfPHPView} Render "/www/lk-broker/apps/frontend/templates/layout.php"
+Jan 23 15:24:41 symfony [info] {sfPartialView} Render "/www/lk-broker/apps/frontend/modules/page/templates/_menu.php"
+Jan 23 15:24:41 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.8 MB | mempeak:    4.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 23 15:24:41 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SELECT page.ID, page.NAME, page.HEADER, page.CONTENT FROM `page`
+Jan 23 15:24:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 23 15:24:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 23 15:24:41 symfony [info] {sfWebDebugLogger} Configuration 2.90 ms (9)
+Jan 23 15:24:41 symfony [info] {sfWebDebugLogger} Factories 60.62 ms (1)
+Jan 23 15:24:41 symfony [info] {sfWebDebugLogger} Action "page/index" 0.79 ms (1)
+Jan 23 15:24:41 symfony [info] {sfWebDebugLogger} View "Success" for "page/index" 72.45 ms (1)
+Jan 23 15:24:41 symfony [info] {sfWebDebugLogger} Partial "page/_menu" 48.06 ms (1)
+Jan 23 15:24:41 symfony [info] {sfWebResponse} Send content (70369 o)
+Jan 25 13:05:02 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'page',  'action' => 'index',)
+Jan 25 13:05:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 25 13:05:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 25 13:05:03 symfony [info] {pageActions} Call "pageActions->executeIndex()"
+Jan 25 13:05:03 symfony [info] {sfPHPView} Render "/www/lk-broker/apps/frontend/modules/page/templates/indexSuccess.php"
+Jan 25 13:05:03 symfony [info] {sfPHPView} Decorate content with "/www/lk-broker/apps/frontend/templates/layout.php"
+Jan 25 13:05:03 symfony [info] {sfPHPView} Render "/www/lk-broker/apps/frontend/templates/layout.php"
+Jan 25 13:05:03 symfony [info] {sfPartialView} Render "/www/lk-broker/apps/frontend/modules/page/templates/_menu.php"
+Jan 25 13:05:03 symfony [err] {PropelException} Unable to open PDO connection [wrapped: SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/Applications/xampp/xamppfiles/var/mysql/mysql.sock' (61)]
+Jan 25 13:05:03 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Jan 25 13:05:03 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 25 13:05:03 symfony [info] {sfWebDebugLogger} Configuration 1658.12 ms (9)
+Jan 25 13:05:03 symfony [info] {sfWebDebugLogger} Factories 1038.20 ms (1)
+Jan 25 13:05:03 symfony [info] {sfWebDebugLogger} Action "page/index" 1.12 ms (1)
+Jan 25 13:05:03 symfony [info] {sfWebDebugLogger} View "Success" for "page/index" 691.32 ms (1)
+Jan 25 13:05:03 symfony [info] {sfWebDebugLogger} Partial "page/_menu" 388.04 ms (1)
+Jan 25 13:05:14 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'page',  'action' => 'index',)
+Jan 25 13:05:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 25 13:05:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 25 13:05:14 symfony [info] {pageActions} Call "pageActions->executeIndex()"
+Jan 25 13:05:14 symfony [info] {sfPHPView} Render "/www/lk-broker/apps/frontend/modules/page/templates/indexSuccess.php"
+Jan 25 13:05:14 symfony [info] {sfPHPView} Decorate content with "/www/lk-broker/apps/frontend/templates/layout.php"
+Jan 25 13:05:14 symfony [info] {sfPHPView} Render "/www/lk-broker/apps/frontend/templates/layout.php"
+Jan 25 13:05:14 symfony [info] {sfPartialView} Render "/www/lk-broker/apps/frontend/modules/page/templates/_menu.php"
+Jan 25 13:05:14 symfony [debug] {sfPropelLogger} time:  0.067 sec | slow:  NO | mem:    4.8 MB | mempeak:    4.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 25 13:05:14 symfony [debug] {sfPropelLogger} time:  0.046 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SELECT page.ID, page.NAME, page.HEADER, page.CONTENT FROM `page`
+Jan 25 13:05:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 25 13:05:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 25 13:05:14 symfony [info] {sfWebDebugLogger} Configuration 2.58 ms (9)
+Jan 25 13:05:14 symfony [info] {sfWebDebugLogger} Factories 60.15 ms (1)
+Jan 25 13:05:14 symfony [info] {sfWebDebugLogger} Action "page/index" 0.52 ms (1)
+Jan 25 13:05:14 symfony [info] {sfWebDebugLogger} View "Success" for "page/index" 279.59 ms (1)
+Jan 25 13:05:14 symfony [info] {sfWebDebugLogger} Partial "page/_menu" 256.10 ms (1)
+Jan 25 13:05:14 symfony [info] {sfWebResponse} Send content (70214 o)

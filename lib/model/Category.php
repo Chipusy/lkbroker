@@ -17,5 +17,9 @@
  * @package    lib.model
  */
 class Category extends BaseCategory {
-
+	
+	public function __toString()
+	{
+		return $this->getHeader();
+	}
 } // Category

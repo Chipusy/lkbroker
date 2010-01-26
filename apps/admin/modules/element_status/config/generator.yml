@@ -1,0 +1,35 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           ElementStatus
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ElementStatus
+    plural:                ElementStatuss
+    route_prefix:          element_status
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions:
+        _new: {label: создать} 
+        _edit: {label: изменить} 
+        _delete: {label: удалить} 
+        _save: {label: сохранить} 
+        _save_and_add: {label: сохранить и добавить} 
+        _list: {label: показать все}
+      fields:
+        name: {label: Имя, help: наименование статуса}
+      list:
+        title: Статусы элементов
+        display: [=name]
+        max_per_page: 20
+        batch_actions: {} 
+      filter:
+        display: [name]
+      form: ~
+      edit:
+        title: Редактированние статуса
+      new:
+        title: Добавление нового статуса

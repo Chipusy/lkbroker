@@ -13,15 +13,19 @@ abstract class BaseCategoryPreferenceFormFilter extends BaseFormFilterPropel
   public function setup()
   {
     $this->setWidgets(array(
-      'category_id'   => new sfWidgetFormPropelChoice(array('model' => 'Category', 'add_empty' => true)),
-      'filter_status' => new sfWidgetFormFilterInput(),
-      'key'           => new sfWidgetFormFilterInput(),
+      'category_id'     => new sfWidgetFormPropelChoice(array('model' => 'Category', 'add_empty' => true)),
+      'filter_status'   => new sfWidgetFormFilterInput(),
+      'preference_type' => new sfWidgetFormFilterInput(),
+      'preference_unit' => new sfWidgetFormFilterInput(),
+      'key'             => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
-      'category_id'   => new sfValidatorPropelChoice(array('required' => false, 'model' => 'Category', 'column' => 'id')),
-      'filter_status' => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
-      'key'           => new sfValidatorPass(array('required' => false)),
+      'category_id'     => new sfValidatorPropelChoice(array('required' => false, 'model' => 'Category', 'column' => 'id')),
+      'filter_status'   => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'preference_type' => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'preference_unit' => new sfValidatorPass(array('required' => false)),
+      'key'             => new sfValidatorPass(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('category_preference_filters[%s]');
@@ -39,10 +43,12 @@ abstract class BaseCategoryPreferenceFormFilter extends BaseFormFilterPropel
   public function getFields()
   {
     return array(
-      'id'            => 'Number',
-      'category_id'   => 'ForeignKey',
-      'filter_status' => 'Number',
-      'key'           => 'Text',
+      'id'              => 'Number',
+      'category_id'     => 'ForeignKey',
+      'filter_status'   => 'Number',
+      'preference_type' => 'Number',
+      'preference_unit' => 'Text',
+      'key'             => 'Text',
     );
   }
 }
