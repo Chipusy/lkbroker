@@ -77,7 +77,7 @@ abstract class BaseCategoryGeneratorConfiguration extends sfModelGeneratorConfig
 
   public function getFormDisplay()
   {
-    return array(  0 => 'name',  1 => 'header',  2 => 'description',);
+    return array(  0 => 'header',  1 => 'name',  2 => 'description',);
   }
 
   public function getEditDisplay()
@@ -100,8 +100,8 @@ abstract class BaseCategoryGeneratorConfiguration extends sfModelGeneratorConfig
     return array(
       'id' => array(  'is_link' => true,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',),
       'parent_id' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',  'label' => 'Родительская категория',  'help' => 'если 0 то данная категория является родительской',),
-      'name' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',  'label' => 'Системное имя',  'help' => 'уникальный идентификатор',),
       'header' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',  'label' => 'Заголовок',  'help' => 'заголовок категории',),
+      'name' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',  'label' => 'Системное имя',  'help' => 'уникальный идентификатор',),
       'description' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',  'label' => 'Описание категории',  'help' => 'краткое описание категории',),
     );
   }
@@ -111,8 +111,8 @@ abstract class BaseCategoryGeneratorConfiguration extends sfModelGeneratorConfig
     return array(
       'id' => array(),
       'parent_id' => array(),
-      'name' => array(),
       'header' => array(),
+      'name' => array(),
       'description' => array(),
     );
   }
@@ -122,8 +122,8 @@ abstract class BaseCategoryGeneratorConfiguration extends sfModelGeneratorConfig
     return array(
       'id' => array(),
       'parent_id' => array(),
-      'name' => array(),
       'header' => array(),
+      'name' => array(),
       'description' => array(),
     );
   }
@@ -133,8 +133,8 @@ abstract class BaseCategoryGeneratorConfiguration extends sfModelGeneratorConfig
     return array(
       'id' => array(),
       'parent_id' => array(),
-      'name' => array(),
       'header' => array(),
+      'name' => array(),
       'description' => array(),
     );
   }
@@ -144,8 +144,8 @@ abstract class BaseCategoryGeneratorConfiguration extends sfModelGeneratorConfig
     return array(
       'id' => array(),
       'parent_id' => array(),
-      'name' => array(),
       'header' => array(),
+      'name' => array(),
       'description' => array(),
     );
   }
@@ -155,8 +155,8 @@ abstract class BaseCategoryGeneratorConfiguration extends sfModelGeneratorConfig
     return array(
       'id' => array(),
       'parent_id' => array(),
-      'name' => array(),
       'header' => array(),
+      'name' => array(),
       'description' => array(),
     );
   }

@@ -20,8 +20,8 @@ generator:
         _save_and_add: {label: сохранить и добавить} 
         _list: {label: показать все} 
       fields:
-        name: {label: Системное имя, help: уникальный идентификатор}
         header: {label: Заголовок, help: заголовок категории}
+        name: {label: Системное имя, help: уникальный идентификатор}
         parent_id: {label: Родительская категория, help: если 0 то данная категория является родительской}
         description: {label: Описание категории, help: краткое описание категории}
       list:
@@ -32,7 +32,7 @@ generator:
       filter:
         display: [name, header]
       form:
-        display: [name, header, description]
+        display: [header, name, description]
       edit:
         title: Редактированние категории %%header%%
       new:

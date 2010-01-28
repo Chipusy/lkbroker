@@ -1,3 +1,13 @@
+<script type="text/javascript" charset="utf-8">
+	
+	$(document).ready(function(){
+		$('#category_header').syncTranslit({
+			destination: 'category_name',
+			urlSeparator: '_'
+		});
+	});
+</script>
+
 <fieldset id="sf_fieldset_<?php echo preg_replace('/[^a-z0-9_]/', '_', strtolower($fieldset)) ?>">
   <?php if ('NONE' != $fieldset): ?>
     <h2><?php echo __($fieldset, array(), 'messages') ?></h2>

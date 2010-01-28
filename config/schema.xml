@@ -11,8 +11,8 @@
 	<table name="category" phpName="Category">
 		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
 		<column name="parent_id" type="integer"/>
-		<column name="name" type="varchar"/>
 		<column name="header" type="varchar"/>
+		<column name="name" type="varchar"/>
 		<column name="description" type="longvarchar" />
 	</table>
 	
@@ -122,14 +122,14 @@
 		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
 		<column name="name" type="varchar" required="true"/>
 		<column name="city" type="varchar"/>
-		<column name="adress" type="varchar"/>
+		<column name="address" type="varchar"/>
 		<column name="web" type="varchar"/>
 		<column name="phone" type="varchar"/>
 		<column name="fax" type="varchar"/>
 		<column name="our_comments" type="longvarchar"/>
-		<column name="all_comments" type="varchar"/>
-		<column name="procent" type="longvarchar"/>
-		<column name="our_comment" type="longvarchar"/>
+		<column name="all_comments" type="longvarchar"/>
+		<column name="procent" type="varchar"/>
+		<column name="director_name" type="varchar"/>
 	</table>
 	
 	<table name="element_file" phpName="ElementFile">
