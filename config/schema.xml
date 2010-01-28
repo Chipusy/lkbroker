@@ -118,6 +118,20 @@
 		<column name="our_comment" type="longvarchar"/>
 	</table>
 	
+	<table name="modx_company" phpName="OldCompany">
+		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+		<column name="name" type="varchar" required="true"/>
+		<column name="city" type="varchar"/>
+		<column name="adress" type="varchar"/>
+		<column name="web" type="varchar"/>
+		<column name="phone" type="varchar"/>
+		<column name="fax" type="varchar"/>
+		<column name="our_comments" type="longvarchar"/>
+		<column name="all_comments" type="varchar"/>
+		<column name="procent" type="longvarchar"/>
+		<column name="our_comment" type="longvarchar"/>
+	</table>
+	
 	<table name="element_file" phpName="ElementFile">
 		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
 		<column name="name" type="varchar" required="true"/>
