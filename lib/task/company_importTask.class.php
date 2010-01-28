@@ -31,11 +31,8 @@ EOF;
 	{
 		// initialize the database connection
 		$databaseManager = new sfDatabaseManager($this->configuration);
-		$connection = $databaseManager->getDatabase($options['connection'] ? $options['connection'] : null)->getConnection();
-	
-		$con = Propel::getConnection();
-		$q = "SELECT * FROM modx_company";
-		$companys = $con->executeQuery($q, ResultSet::FETCHMODE_ASSOC);
+		
+		$companys = OldCompanyPeer::doSelect(new Criteria());
 		
 		foreach ($companys as $key => $value) 
 		{
