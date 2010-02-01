@@ -142,4 +142,12 @@
 		</foreign-key>
 	</table>
 	
+	<table name="modx_site_content" phpName="Content">
+		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+		<column name="template" type="integer"/>
+		<column name="parent" type="integer"/>
+		<column name="pagetitle" type="varchar"/>
+		<column name="description" type="longvarchar"/>
+	</table>
+	
 </database>

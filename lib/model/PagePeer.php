@@ -30,6 +30,6 @@ class PagePeer extends BasePagePeer
 	{
 		$c = new Criteria();
 		
-		return self::doSelect($c);
+		return self::doSelect($c);;
 	}
 } // PagePeer

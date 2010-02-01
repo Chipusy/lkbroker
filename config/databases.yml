@@ -24,9 +24,9 @@ all:
     class:        sfPropelDatabase
     param:
       classname:  PropelPDO
-      dsn:        mysql:dbname=lk-broker;host=localhost
-      username:   root
-      password:   
+      dsn:        mysql:dbname=lk-broker;host=lk-broker.ru
+      username:   megbroker
+      password:   qwe123
       encoding:   utf8
       persistent: true
       pooling:    true

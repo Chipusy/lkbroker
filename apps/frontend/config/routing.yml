@@ -3,9 +3,13 @@ homepage:
   url:   /
   param: { module: page, action: index }
 
+element:
+  url:   /catalog/:category_name/:element_id
+  param: { module: element, action: view }
+
 catalog:
-  url:   /catalog
-  param: { module: catalog, action: index }
+  url:   /catalog/:category_name
+  param: { module: category, action: view }
 
 page:
   url:   /:name

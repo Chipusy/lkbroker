@@ -17,5 +17,4 @@
  * @package    lib.model
  */
 class ElementPeer extends BaseElementPeer {
-
 } // ElementPeer

@@ -4,7 +4,8 @@ class pageActions extends sfActions
 {
 	public function executeIndex(sfWebRequest $request)
 	{
-		
+		$this->parentCategory = CategoryPeer::getAllParent();
+		$this->subCategory = CategoryPeer::getAllSub();
 	}
 	
 	public function executeView(sfWebRequest $request)

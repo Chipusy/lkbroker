@@ -1,0 +1,75 @@
+<?xml version='1.0' ?>
+<catalog>
+	<offers>
+		<offer id="6139">
+			<category>Самосвалы</category>
+			<name> Самосвал Dongfeng DFL 3251A-1  </name>
+			<marka> Dong Feng   </marka>
+			<price valuta="RUR">572 000</price>
+			<pricevlad>650000</pricevlad>
+			<year>2008</year>
+			<place>Самара</place>
+			<sost>Хорошее</sost>
+			<user>volgopromleasing</user>
+			<picture>http://lk-broker.ru/assets/images/user-126/6139.jpg</picture>
+			<url>http://www.lk-broker.ru/catalog/dorstroy/samosval/6139.html</url>
+			<contact>
+				 Логин: 
+				Название: Ткачёв Дмитрий Викторович
+				Email: dvt@vpl.ru
+				Телефон: (846) 333-57-33
+				Мобильный телефон:  8-927-264-60-01.
+				Комментарий:  
+			</contact>
+			<description>
+				 Грузоподьемность 20 тонн.
+				Пробег 50-60тыс.км.
+				количество 7  единиц 2007-2008 годов
+				4ед 340лс  3 ед 300лс  
+			</description> 
+			<comments> Машины убитые их готовы отдать по 500-600 тр.  </comments>
+			<picture1>http://lk-broker.ru/assets/images/user-126/6139_1.jpg</picture1>
+			<picture2>http://lk-broker.ru/assets/images/user-126/6139_2.jpg</picture2>
+			<picture3>http://lk-broker.ru/assets/images/user-126/6139_3.jpg</picture3>
+			<formula_koles/>
+			<gruz/>
+			<kp/>
+			<uslov>Продажа и лизинг</uslov>
+			<toplivo_type/>
+		</offer>
+	
+		<offer id="3505">
+			<category>Бетонные заводы </category>
+			<name> Бетоносмесительная установка БСУ 35.40  </name>
+			<marka>   </marka>
+			<price valuta="RUR">4 720 000</price>
+			<pricevlad>5900000</pricevlad>
+			<year>2007</year>
+			<place>Агинское</place>
+			<sost>Хорошее</sost>
+			<user/>
+			<picture>http://lk-broker.ru/assets/images/user-124/3505.jpg</picture>
+			<url>http://www.lk-broker.ru/catalog/proizvodlinii/4388/3505.html</url>
+			<contact>
+				 Логин: 
+				Название: 
+				Email: 
+				Телефон: 
+				Мобильный телефон: 
+				Комментарий:  
+			</contact>
+			<description>
+				   
+			</description> 
+			<comments>   </comments>
+			<picture1>http://lk-broker.ru/assets/images/user-124/3505_1.jpg</picture1>
+			<picture2>http://lk-broker.ru/assets/images/user-124/3505_2.jpg</picture2>
+			<picture3>http://lk-broker.ru/assets/images/user-124/3505_3.jpg</picture3>
+			<formula_koles/>
+			<gruz/>
+			<kp/>
+			<uslov>Продажа и лизинг</uslov>
+			<toplivo_type/>
+		</offer>
+	</offers>
+</catalog>

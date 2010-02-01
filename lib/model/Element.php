@@ -18,4 +18,20 @@
  */
 class Element extends BaseElement {
 
+	public function getPhoto()
+	{
+		$c = new Criteria();
+		$c->add(ElementFilePeer::FILE_TYPE, 1);
+		$c->add(ElementFilePeer::ELEMENT_ID, $this->getId());
+		
+		$photo = ElementFilePeer::doSelectOne($c);
+		
+		if ($photo)
+		{
+			return $photo->getName();
+		}
+		
+		return false;
+	}
+
 } // Element

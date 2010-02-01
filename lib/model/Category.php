@@ -22,4 +22,14 @@ class Category extends BaseCategory {
 	{
 		return $this->getHeader();
 	}
+	
+	public function getParent()
+	{
+		if ($this->getParentId() != 0)
+		{
+			return CategoryPeer::retrieveByPk($this->getParentId());
+		}
+		
+		return false;
+	}
 } // Category

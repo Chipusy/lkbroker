@@ -1,3 +1,3 @@
-<h2><?php echo $page->getHeader() ?></h2>
+<div class="name_page"><h1><?php echo $page->getHeader() ?></h1></div>
 
 <?php echo htmlspecialchars_decode($page->getContent()) ?>
